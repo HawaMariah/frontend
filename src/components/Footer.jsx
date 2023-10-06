@@ -10,6 +10,8 @@ const Footer = (e) => {
     icon: 'success',
     title: 'Subscription Successful!',
     text: 'Thank you for subscribing.',
+  }).then(() => {
+    window.location.href = "/";
   });
 }
 
