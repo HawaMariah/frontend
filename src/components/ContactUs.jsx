@@ -1,10 +1,33 @@
-import React from 'react'
+
+import React from 'react';
+import Swal from 'sweetalert2';
+
+
 
 function ContactUs() {
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+   
+    Swal.fire({
+      icon: 'success',
+      title: 'Thank You ',
+      text: 'We will reach out to you in a few days.',
+    }).then(() => {
+      e.target.reset();
+
+  
+    })
+    
+
+  
+  };
+
   return (
-<div className="container mx-auto my-10 p-6 bg-gray-100 rounded-lg">
+    <div className="container mx-auto my-10 p-6 bg-gray-100 rounded-lg">
       <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
-      <form className="space-y-4">
+      <form className="space-y-4" onSubmit={handleSubmit}>
         <div>
           <label className="block font-bold mb-2">Your Name (required)</label>
           <input
@@ -49,9 +72,7 @@ function ContactUs() {
       <p className="mt-6">Reach out with any comments or queries you might have</p>
       <p>Contact email: info@nourishnow.org</p>
     </div>
-  
-
-  )
+  );
 }
 
-export default ContactUs
+export default ContactUs;
