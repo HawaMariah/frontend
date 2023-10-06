@@ -72,7 +72,7 @@ const ItemForm = () => {
         onSubmit={(values, { setSubmitting }) =>{
 
         
-          fetch(`https://nnbackend.onrender.com/${user_id}`,
+          fetch(`https://nnbackend.onrender.com/donateFood/${user_id}`,
           {
             method: 'POST',
             headers: {
